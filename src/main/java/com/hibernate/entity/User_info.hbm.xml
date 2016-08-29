@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.demo.entity">
+
+	<class name="User_info" table="USER_INFO">
+		<id name="user_name">
+			<column name="USER_NAME"/>
+			<generator class="assigned" />
+		</id>
+		<property name="user_pass" column="USER_PASS" />
+		<property name="user_id" column="USER_ID" />
+		<property name="real_name" column="REAL_NAME" />
+		<property name="last_logintime"  type="timestamp" column="LAST_LOGINTIME" />
+	</class>
+
+</hibernate-mapping>
