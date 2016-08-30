@@ -1,6 +1,7 @@
 package com.hibernate.entity;
 
 import java.sql.Timestamp;
+import java.util.UUID;
 
 public class Role_mp {
 
@@ -56,4 +57,7 @@ public class Role_mp {
 		return "Role_mp [roleid=" + roleid + ", moduleid=" + moduleid + ", permissionid=" + permissionid + ", createtime=" + createtime + "]";
 	}
 
+	public static void main(String[] args) {
+		System.out.println(UUID.randomUUID());
+	}
 }

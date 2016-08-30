@@ -1,11 +1,9 @@
 package com.hibernate.test;
 
-import java.sql.Timestamp;
+import java.util.UUID;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
-import com.hibernate.entity.User_info;
 
 public class HibernateTest {
 
@@ -15,7 +13,7 @@ public class HibernateTest {
 		try {
 			transaction = session.beginTransaction();
 //			User_info user_info = (User_info) session.load(User_info.class, "601653489");
-			session.save(new User_info("6016534891","wj8621174","0","哈哈", new Timestamp(System.currentTimeMillis())));
+//			session.save(new User_info("6016534891","wj8621174","0","哈哈", new Timestamp(System.currentTimeMillis())));
 //			session.delete(user_info);
 //			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			transaction.commit();
