@@ -1,5 +1,5 @@
 show tables;
-drop table  category;
+drop table role_mp;
 select * from user_info;
 insert into user_info (username,password,name) values ("601653488","wjasdasd","王俊");
 
@@ -18,11 +18,10 @@ CREATE TABLE user_info (
 
 --user_role
 CREATE TABLE user_role (
-	id VARCHAR(255) NOT NULL,
 	username VARCHAR(255) NOT NULL,
 	roleid VARCHAR(255) NOT NULL,
 	createtime DATETIME DEFAULT NULL,
-	PRIMARY KEY (id)
+	PRIMARY KEY (username,roleid)
 ) ENGINE=InnoDB;
 
 --role_info
@@ -35,12 +34,11 @@ CREATE TABLE role_info (
 
 --role_mp
 CREATE TABLE role_mp (
-	id VARCHAR(255) NOT NULL,
 	roleid VARCHAR(255) NOT NULL,
 	moduleid VARCHAR(255) NOT NULL,
 	permissionid VARCHAR(255) NOT NULL,
 	createtime DATETIME DEFAULT NULL,
-	PRIMARY KEY (id)
+	PRIMARY KEY (roleid,moduleid,permissionid)
 ) ENGINE=InnoDB;
 
 --module_info

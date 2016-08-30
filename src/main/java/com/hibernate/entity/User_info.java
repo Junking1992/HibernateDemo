@@ -4,66 +4,75 @@ import java.sql.Timestamp;
 
 public class User_info {
 
-	private String user_name, user_pass, user_id, real_name;
-
-	private Timestamp last_logintime;
+	private String username, password, name;
+	private Integer state;
+	private Timestamp lastlogintime, createtime;
 
 	public User_info() {
 		super();
 	}
 
-	public User_info(String user_name, String user_pass, String user_id, String real_name, Timestamp last_logintime) {
+	public User_info(String username, String password, String name, Integer state, Timestamp lastlogintime, Timestamp createtime) {
 		super();
-		this.user_name = user_name;
-		this.user_pass = user_pass;
-		this.user_id = user_id;
-		this.real_name = real_name;
-		this.last_logintime = last_logintime;
+		this.username = username;
+		this.password = password;
+		this.name = name;
+		this.state = state;
+		this.lastlogintime = lastlogintime;
+		this.createtime = createtime;
 	}
 
-	public String getUser_name() {
-		return user_name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getUser_pass() {
-		return user_pass;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setUser_pass(String user_pass) {
-		this.user_pass = user_pass;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getUser_id() {
-		return user_id;
+	public String getName() {
+		return name;
 	}
 
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getReal_name() {
-		return real_name;
+	public Integer getState() {
+		return state;
 	}
 
-	public void setReal_name(String real_name) {
-		this.real_name = real_name;
+	public void setState(Integer state) {
+		this.state = state;
 	}
 
-	public Timestamp getLast_logintime() {
-		return last_logintime;
+	public Timestamp getLastlogintime() {
+		return lastlogintime;
 	}
 
-	public void setLast_logintime(Timestamp last_logintime) {
-		this.last_logintime = last_logintime;
+	public void setLastlogintime(Timestamp lastlogintime) {
+		this.lastlogintime = lastlogintime;
+	}
+
+	public Timestamp getCreatetime() {
+		return createtime;
+	}
+
+	public void setCreatetime(Timestamp createtime) {
+		this.createtime = createtime;
 	}
 
 	@Override
 	public String toString() {
-		return "User_info [user_name=" + user_name + ", user_pass=" + user_pass + ", user_id=" + user_id + ", real_name=" + real_name + ", last_logintime=" + last_logintime + "]";
+		return "User_info [username=" + username + ", password=" + password + ", name=" + name + ", state=" + state + ", lastlogintime=" + lastlogintime + ", createtime=" + createtime + "]";
 	}
 
 }

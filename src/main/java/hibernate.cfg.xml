@@ -11,7 +11,7 @@
 		<!--配置数据库的驱动程序，Hibernate在连接数据库时，需要用到数据库的驱动程序 -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<!--设置数据库的连接url:jdbc:mysql://192.168.56.101:3306/jun -->
-		<property name="connection.url">jdbc:mysql://192.168.56.101:3306/jun</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/demo</property>
 		<!--连接数据库是用户名 -->
 		<property name="connection.username">root</property>
 		<!--连接数据库是密码 -->
