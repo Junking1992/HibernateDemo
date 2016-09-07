@@ -36,6 +36,6 @@
 		<!-- <property name="connection.characterEncoding">gbk </property> -->
 
 		<!--指定映射文件为“com/demo/entity/User_info.hbm.xml” -->
-<!-- 		<mapping resource="com/demo/entity/User_info.hbm.xml"/> -->
+		<mapping resource="com/hibernate/entity/User_info.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

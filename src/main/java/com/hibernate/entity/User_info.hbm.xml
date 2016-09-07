@@ -3,17 +3,17 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.demo.entity">
-
+<hibernate-mapping package="com.hibernate.entity">
 	<class name="User_info" table="USER_INFO">
-		<id name="user_name">
-			<column name="USER_NAME"/>
+		<id name="username" type="java.lang.String">
+			<column name="USERNAME" />
 			<generator class="assigned" />
 		</id>
-		<property name="user_pass" column="USER_PASS" />
-		<property name="user_id" column="USER_ID" />
-		<property name="real_name" column="REAL_NAME" />
-		<property name="last_logintime"  type="timestamp" column="LAST_LOGINTIME" />
+		<property name="password" column="PASSWORD" />
+		<property name="name" column="NAME" />
+		<property name="state" column="STATE" type="byte" />
+		<property name="lastlogintime" column="LASTLOGINTIME" type="timestamp" />
+		<property name="createtime" column="CREATETIME" type="timestamp" />
 	</class>
 
 </hibernate-mapping>

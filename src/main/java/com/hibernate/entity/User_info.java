@@ -5,14 +5,14 @@ import java.sql.Timestamp;
 public class User_info {
 
 	private String username, password, name;
-	private Integer state;
+	private byte state;
 	private Timestamp lastlogintime, createtime;
 
 	public User_info() {
 		super();
 	}
 
-	public User_info(String username, String password, String name, Integer state, Timestamp lastlogintime, Timestamp createtime) {
+	public User_info(String username, String password, String name, byte state, Timestamp lastlogintime, Timestamp createtime) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -46,11 +46,11 @@ public class User_info {
 		this.name = name;
 	}
 
-	public Integer getState() {
+	public byte getState() {
 		return state;
 	}
 
-	public void setState(Integer state) {
+	public void setState(byte state) {
 		this.state = state;
 	}
 
