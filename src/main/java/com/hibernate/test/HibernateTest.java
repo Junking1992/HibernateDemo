@@ -3,28 +3,57 @@ package com.hibernate.test;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import com.hibernate.entity.User_info;
+import com.hibernate.entity.Role_info;
 
 public class HibernateTest {
 
-	public static void main(String[] args) throws Exception {
+//	public static void main(String[] args) throws Exception {
+//		Session session = HibernateUtil.getSession();
+//		Transaction transaction = null;
+//		try {
+//			transaction = session.beginTransaction();
+//			String hql = " select pk_jar,code from mtws_jar where pk_jar='1001A4100000D721013 '";   
+//	        Query query = session.createSQLQuery(hql); 
+//	        //默认查询出来的list里存放的是一个Object数组   
+//	        List<Object[]> list = query.list();  
+//	        for(Object[] arr : list){
+//	        	System.out.println(arr[0]);
+//	        	System.out.println(arr[1]);
+//	        }
+//			transaction.commit();
+//		} catch (Exception e) {
+////			if (transaction != null){
+////				transaction.rollback();
+////			}
+//			throw e;
+//		} finally {
+//			session.close();
+//			HibernateUtil.shutdown();
+//		}
+//	}
+	
+	public static void main(String[] args){
 		Session session = HibernateUtil.getSession();
 		Transaction transaction = null;
 		try {
 			transaction = session.beginTransaction();
-			User_info user_info = (User_info) session.get(User_info.class, "601653489");
-//			session.save(new User_info("122382438","wj8621174","冰", (byte)0, null, new Timestamp(System.currentTimeMillis())));
-//			session.delete(user_info);
-//			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-			System.out.println(user_info);
+			
+//			Mo_Type type = new Mo_Type();
+//			type.setUuid(UUID.randomUUID().toString());
+//			type.setTs(new Date());
+//			
+//			session.save(type);
+//			Role_info ro = new Role_info();
+//			session.save(ro);
 			transaction.commit();
 		} catch (Exception e) {
 			if (transaction != null){
 				transaction.rollback();
 			}
-			throw e;
+			e.printStackTrace();
 		} finally {
 			session.close();
+			HibernateUtil.shutdown();
 		}
 	}
 

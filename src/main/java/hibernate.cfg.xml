@@ -9,20 +9,21 @@
 	<!--表明以下的配置是针对session-factory配置的，SessionFactory是Hibernate中的一个类，这个类主要负责保存HIbernate的配置信息，以及对Session的操作 -->
 	<session-factory>
 		<!--配置数据库的驱动程序，Hibernate在连接数据库时，需要用到数据库的驱动程序 -->
-		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
 		<!--设置数据库的连接url:jdbc:mysql://192.168.56.101:3306/jun -->
-		<property name="connection.url">jdbc:mysql://localhost:3306/demo</property>
+<!-- 		<property name="connection.url">jdbc:oracle:thin:@10.0.5.152:1521/jknc</property> -->
+		<property name="connection.url">jdbc:oracle:thin:@127.0.0.1:1521/myorcl</property>
 		<!--连接数据库是用户名 -->
-		<property name="connection.username">root</property>
+		<property name="connection.username">jun</property>
 		<!--连接数据库是密码 -->
-		<property name="connection.password">wj8621174</property>
+		<property name="connection.password">junking</property>
 		<!--数据库连接池的大小 -->
 		<property name="connection.pool.size">20 </property>
 		<!--hibernate.dialect 只是Hibernate使用的数据库方言,就是要用Hibernate连接那种类型的数据库服务器。 -->
-		<property name="dialect">org.hibernate.dialect.MySQLDialect </property>
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
 		<!-- <property name="dialect">org.hibernate.dialect.OracleDialect</property> -->
 		<!--是否在后台显示Hibernate用到的SQL语句，开发时设置为true，便于差错，程序运行时可以在Eclipse的控制台显示Hibernate的执行Sql语句。项目部署后可以设置为false，提高运行效率 -->
-		<property name="show_sql">true</property>
+		<property name="show_sql">false</property>
 
 		<!--jdbc.fetch_size是指Hibernate每次从数据库中取出并放到JDBC的Statement中的记录条数。Fetch Size设的越大，读数据库的次数越少，速度越快，Fetch Size越小，读数据库的次数越多，速度越慢 -->
 		<!-- <property name="jdbc.fetch_size">50 </property> -->
@@ -36,6 +37,6 @@
 		<!-- <property name="connection.characterEncoding">gbk </property> -->
 
 		<!--指定映射文件为“com/demo/entity/User_info.hbm.xml” -->
-		<mapping resource="com/hibernate/entity/User_info.hbm.xml"/>
+<!-- 		<mapping resource="com/hibernate/entity/Role_info.hbm.xml"/> -->
 	</session-factory>
 </hibernate-configuration>
